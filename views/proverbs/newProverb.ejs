@@ -1,0 +1,24 @@
+<% layout('/layouts/boilerplate') %>
+<div class="row">
+    <h2 class="text-center mt-3">New Proverb</h2>
+    <div class="col-6 offset-3">
+    <form action="/proverbs" method="post" novalidate class="validated-form">
+        <div class="mb-3">
+            <label class="form-label" for="author">Author</label>
+            <input class="form-control" type="text" id="author" name="proverb[author]" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="proverb">Proverbs</label>
+            <textarea class="form-control" id="proverb" name="proverb[title]" required></textarea>
+        </div>
+
+        
+
+        <div class="mb-3">
+            <button class="btn btn-success">Submit</button>
+        </div>
+    </form>
+    </div>
+</div>
+

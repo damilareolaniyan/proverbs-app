@@ -1,0 +1,22 @@
+<% layout('/layouts/boilerplate') %>
+    <h2>All Proverbs</h2>
+    <div>
+        <a href="/proverbs/new">New</a>
+    </div>
+    <ul>
+        <% for(let proverb of pro) {%>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= proverb.title %>
+                            </h5>
+                            <p class="card-text">Posted by: <%= proverb.posted %></p>
+                            <a class="btn btn-primary" href="/proverbs/<%= proverb._id%>">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <%} %>
+    </ul>
